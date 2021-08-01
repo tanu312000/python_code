@@ -1,0 +1,19 @@
+def extract_num(words):
+  number=[]
+  for word in words.split():
+    if not word.isalpha():
+      number.append(word)
+  return number
+  
+  
+  
+#using regex
+
+def extract_num_second(words):
+  digit=re.findall('\d*\.?\d+',words)
+  return digit
+  
+  
+
+words="Tanu is 1.5 a good 2 girl"
+print(extract_num(words))
